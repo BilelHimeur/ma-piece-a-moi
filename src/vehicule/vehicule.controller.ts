@@ -14,6 +14,7 @@ export class VehiculeController {
       vehicule = await this.vehiclesService.scrapVehiculeDataFromAutoPieces(immatriculation);
       if (vehicule) {
         // Insérer les données du véhicule en base
+        await this.vehiclesService.createVehicule(vehicule);
       } else {
         return 'Aucun véhicule ne correspond à cette immatriculation dans AUTO PIECES !';
       }

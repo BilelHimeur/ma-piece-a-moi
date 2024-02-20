@@ -17,6 +17,11 @@ export class VehiculeService {
     return this.vehicleModel.findOne({ immatriculation }).exec();
   }
 
+  /**
+   * Extraire les données utiles pour faciliter la recherche de pièces via le web sraping
+   *
+   * @param immatriculation : string représentant l'immatriculation du véhicule
+   */
   async scrapVehiculeDataFromAutoPieces(immatriculation: string): Promise<Vehicule> {
     const browser = await puppeteer.launch();
     try {
@@ -65,5 +70,14 @@ export class VehiculeService {
     } finally {
       await browser.close();
     }
+  }
+
+  /**
+   * Insertion du véhicule en base de données mongodb
+   *
+   * @param vehicule : Vehicule
+   */
+  async createVehicule(vehicule: Vehicule): Promise<Vehicule> {
+    return vehicule.save();
   }
 }
