@@ -10,8 +10,10 @@ export class Vehicule extends Document {
   annee: string;
 
   @Prop()
-  pieces: [string];
+  immatriculation: string;
 
+  @Prop()
+  pieces: [string];
 }
 
 export const VehicleSchema = SchemaFactory.createForClass(Vehicule);

@@ -2,9 +2,13 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { VehiculeModule } from './vehicule/vehicule.module';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [VehiculeModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost:27017/AutodistributionDB'),
+    VehiculeModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
