@@ -33,7 +33,7 @@ export class VehiculeService {
       await page.type(AUTO_PIECES.SEARCH_BY_INPUT_SELECTOR, immatriculation);
 
       await Promise.all([
-        page.waitForNavigation({ timeout: 3000 }), // timeout si pas de véhicule pour l'immatriculation entrée
+        page.waitForNavigation({ timeout: 2 * 1000 }), // timeout si pas de véhicule pour l'immatriculation entrée
         page.click(AUTO_PIECES.SEARCH_BUTTON_SELECTOR),
       ]);
 
