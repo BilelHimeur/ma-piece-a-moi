@@ -6,6 +6,7 @@ Avoir une base de données MongoDB installée et exposée sur un serveur local (
 Clonez le projet depuis le lien : https://github.com/BilelHimeur/ma-piece-a-moi.
 Exécutez la commande npm install pour installer les dépendances du projet.
 Ensuite, lancez le projet localement avec la commande npm run start.
+Une documentation OpenAPI des endpoints du projet est disponible sur lien : http://localhost:3000/api
 
 # Projet Frontend : ma-piece-front :
 Clonez le projet depuis le lien : https://github.com/BilelHimeur/ma-piece-front.
